@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Data Atual</title>
+</head>
+<body>
+    <h1>Mostrar Data Atual</h1>
+    <script>
+        //Terça-feira, 16 de agosto de 2022
+
+        const days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabádo"];
+        const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+        const d = new Date();
+        
+        let dayWeek = days[d.getDay()];
+        let month = months[d.getMonth()];
+        const day = d.getDate();
+        const year = d.getFullYear();
+
+        document.write(dayWeek + ", " + day + " de " + month + " de " + year);
+
+    </script>
+</body>
+</html>
