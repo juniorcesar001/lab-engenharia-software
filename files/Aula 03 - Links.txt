@@ -1,0 +1,11 @@
+// Arrays
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays
+
+// Objetos
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics
+https://developer.mozilla.org/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes
+
+// Extra
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript

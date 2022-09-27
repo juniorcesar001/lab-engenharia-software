@@ -1,0 +1,29 @@
+Funções
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
+
+Números e Datas
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates
+
+Strings
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Text_formatting
+
+Expressões Regulares (extra)
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,15 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir Data Atual</title>
+    <title>Jogo Adivinhe um número</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #result {
+            color: #FFF;
+            font-weight: bold;
+            border-radius: 7px;
+            padding: 4px;
+        }
+        #result.success {
+            background-color: darkgreen;
+        }
+        #result.error {
+            background-color: brown;
+        }
+        a {
+            display: block;
+            padding: 7px;
+            background-color: rgb(58, 31, 83);
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 900;
+            width: auto;
+            border-radius: 7px;
+            width: 180px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        form button {
+            padding: 2px;
+            background-color: rgb(58, 31, 83);
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 900;
+            width: auto;
+            width: 180px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        form #input {
+            border-radius: 7px;
+        }
+        .d-none {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- DESAFIO 1 -->
+    <!-- https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash -->
+    
+    <h1>Jogo Adivinhe um número</h1>
+    <p>Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.</p>
+
+    <form id ="form" action="#">
+        <label for="">
+            Digite seu palpite: 
+            <input id="input" type="text">
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h4 id="palpites">Palpites Anteriores: <span></span></h4>
+
+    <div>
+        <span id="result"></span>
+        <span id="aproximacao"></span>
+
+        <a href="" id="restart" class="d-none">Iniciar novo jogo!</a>
+    </div>
+    
 
     <script>
-        const d = new Date();
+        const number = Math.floor(Math.random() * (100 - 1) + 1);
+        const $form = document.getElementById('form');
+        const $input = document.getElementById('input');
+        const $palpites = document.getElementById('palpites');
+        const $result = document.getElementById('result');
+        const $aproximacao = document.getElementById('aproximacao');
+        const $restart = document.getElementById('restart');
+        const chance = 10;
 
-        const dayWeek = d.getTime();
-        console.log(d.getTime());
+        let palpites = [] ;
+        let countClick = 0;
+        
+        console.log(number);
+        
+        $form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            countClick++;
+
+            palpites.push(parseInt($input.value))
+            $palpites.children[0].textContent = palpites;
+
+            if (parseInt($input.value) == number) {
+                $result.textContent = "ACERTOU!!"
+                $result.classList.add('success');
+                $result.classList.remove('error');
+                
+                
+                $restart.classList.remove('d-none');
+
+                $aproximacao.textContent = "Seu número está certo!";
+            } else if (parseInt($input.value) < number) {
+                $result.textContent = "ERRROUUU!!"
+                $result.classList.add('error');
+                $result.classList.remove('success');
+
+                $aproximacao.textContent = "Seu palpite está muito baixo!";
+            } else {
+                $result.textContent = "ERRROUUU!!"
+                $result.classList.add('error');
+                $result.classList.remove('success');
+
+                $aproximacao.textContent = "Seu palpite está muito alto!";
+            }
+        });
     
     </script>
 </body>

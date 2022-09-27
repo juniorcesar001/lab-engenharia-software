@@ -1,0 +1,22 @@
+Aula 01
+
+Introdução:
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+
+Variáveis:
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Variables
+
+Operadores:
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
+
+Estruturas de decisão:
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals
+
+Estruturas de Repetição:
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
+
+Desafio Parte 1
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash
+
+Desafio Parte 2
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong
