@@ -74,10 +74,8 @@
     <div>
         <span id="result"></span>
         <span id="aproximacao"></span>
-
         <a href="" id="restart" class="d-none">Iniciar novo jogo!</a>
     </div>
-    
 
     <script>
         const number = Math.floor(Math.random() * (100 - 1) + 1);
@@ -98,6 +96,15 @@
             e.preventDefault();
             countClick++;
 
+            if (countClick >= 10) {
+
+                $restart.classList.remove('d-none');
+                $result.textContent = "GAME-OVER"
+                $aproximacao.textContent = "Você escedeu as 10 tentativas!! ";
+
+                return;
+            }
+
             palpites.push(parseInt($input.value))
             $palpites.children[0].textContent = palpites;
 
@@ -105,7 +112,6 @@
                 $result.textContent = "ACERTOU!!"
                 $result.classList.add('success');
                 $result.classList.remove('error');
-                
                 
                 $restart.classList.remove('d-none');
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Implemente um script com um array cujos valores
+        sejam adicionados dinamicamente pelo usuário
+        utilizando-se formulário. A cada nova inserção exiba
+        todos os dados cadastrados em ordem alfabética em
+        uma lista ordenada do html -->
+
+    <form id="form" action="">
+        <input id="input" type="text" >
+    </form>
+
+    <ul id="list">
+
+    </div>
+
+    <script>
+        const $input = document.getElementById('input');
+        const $form = document.getElementById('form');
+        const $list = document.getElementById('list');
+
+        let list = [];
+
+        $form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            var e = document.createElement("li");
+            var t = document.createTextNode($input.textContent);
+            e.appendChild(t);
+
+
+        });
+
+    </script>
+    
+</body>
+</html>
